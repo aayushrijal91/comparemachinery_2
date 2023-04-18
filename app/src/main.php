@@ -58,7 +58,8 @@
                     </div>
                 </div>
                 <div class="col">
-                    <form action="./src/form.php" method="POST">
+                    <form action="./src/form.php" method="POST" id="heroForm">
+                        <input type="hidden" name="token" id="recaptchaResponse" class="recaptchaResponse">
                         <div class="fs-48 fw-700 d-flex align-items-center gap-3 lh-1 heading">
                             <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2 16.9999H16.4003V31.9999H2V16.9999ZM2 16.9999C2 9.30022 5.64744 4.19743 11.6002 1.99994" stroke="white" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -83,6 +84,7 @@
                                 <div class="form-group">
                                     <label for="phoneInput">Your Number</label>
                                     <input type="tel" id="phoneInput" name="phoneNumber" class="form-control" placeholder="Phone Number" required>
+                                    <small id="phoneError" class="validationError">Please enter a valid phone number</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
